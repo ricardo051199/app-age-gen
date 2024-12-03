@@ -10,6 +10,7 @@ export class Tab4Page implements OnInit {
 
   gender: string = '';
   age: number = 0;
+  ethnicity: string = '';
   result: string = '';
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
@@ -19,6 +20,7 @@ export class Tab4Page implements OnInit {
       if (params['gender'] && params['age']) {
         this.gender = params['gender'];
         this.age = params['age'];
+        this.ethnicity = params['ethnicity'];
       } else {
         this.result = params['result'] || 'No hay resultados disponibles.';
       }

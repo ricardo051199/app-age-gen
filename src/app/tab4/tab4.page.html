@@ -7,7 +7,7 @@
 <ion-content>
   <div class="text-container">
     <div class="result-message">
-      <div *ngIf="gender && age">
+      <div *ngIf="gender && age && ethnicity">
         <h2>¡¡¡ Predicción Exitosa !!!</h2>
         <div>
           <img *ngIf="gender === 'Mujer'" 
@@ -22,6 +22,7 @@
         <div class="prediction-container">
           <p><strong>Género:</strong> {{ gender }}</p>
           <p><strong>Edad:</strong> {{ age }} años</p>
+          <p><strong>Etnia:</strong> {{ ethnicity }}</p>
         </div>
       </div>
 

@@ -31,10 +31,9 @@ export class Tab3Page {
     const headers = { 'Content-Type': 'application/json' };
     this.http.post('http://localhost:5000/predict', { image: this.capturedImage }, { headers }).subscribe(
       (response: any) => {
-        if (response.gender && response.age) {
-          // Redirige a Tab4 con la predicción (enviando un objeto con gender y age)
+        if (response.gender && response.age && response.ethnicity) {
           this.router.navigate(['/tab4'], { 
-            queryParams: { gender: response.gender, age: response.age } 
+            queryParams: { gender: response.gender, age: response.age, ethnicity: response.ethnicity } 
           });
         } else {
           this.router.navigate(['/tab4'], { queryParams: { result: 'Predicción fallida.' } });
