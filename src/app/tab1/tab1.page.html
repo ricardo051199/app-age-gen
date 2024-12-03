@@ -1,17 +1,19 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      AgeGen
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content>
+  <div class="text-container">
+    <ion-icon name="happy" style="font-size: 200px; color: #6C63FF; margin-right: 10px;"></ion-icon>
+    <h1>Descubre lo que tu rostro dice de ti</h1>
+    <p>Analizamos tus rasgos faciales para predecir tu edad y género con precisión.</p>
+    <ion-button expand="block" (click)="startRecognition()">Iniciar Reconocimiento Facial</ion-button>
+  </div>
 </ion-content>
